@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nav Menu Component*/
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 1rem 5rem;
+  transition: all 1s;
+  width: 100%;
+  background-color: #b9ece521;
+}
+nav .logo{
+  color: rgb(0, 0, 220);
+  font-family: sans-serif;
+}
+nav ul{
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul li{
+  list-style-type: none;
+}
+nav a{
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(0, 0, 107);
+  font-size: 1.1em;
+}
+nav a:hover{
+  color: rgba(23, 4, 233, 0.893);
+}
+nav button{
+  background-color: blue;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  cursor: pointer;
+}
+.menu .bar{
+  width: 1.7rem;
+  color: black;
+  background-color: black;
+  line-height: 3px;
+  border: 2.222px solid black;
+}
+.menu .bar1{
+  @keyframes change {
+    60%{
+    
+    }
+  }
+}
+
+.dropdown{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.dropdown ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown li{
+list-style-type: none;
+line-height: 2rem;
+border-bottom: 1.5px solid black;
+padding: 0.5rem 5rem;
+}
+.visited{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+button{
+  padding: 0.5rem 1rem;
+}
+
+.dropdown a{
+  text-decoration: none;
+  color: rgb(1, 1, 108);
+  display: block;
+  font-weight: bolder;
+  font-size: 1.1em
+}
+.dropdown a:hover{
+  color: rgba(23, 4, 233, 0.893);
+ 
+}
+
+.error{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.error h1{
+  font-size: 5em;
+}
+
+@media screen and (min-width:901px) {
+  .menu{
+    display: none;
+  }
+  .dropdown{
+    display: none;
+  }
+}
+@media screen and (max-width:900px) {
+  nav{
+    padding: 0.7rem 1rem;
+    justify-content: space-between;
+  }
+  .menu-items{
+    display: none;
+  }
+  
+  nav img{
+    display: none;
+  }
+  .dropdown li{
+  padding: 0.5rem 1rem;
+  }
+  button{
+    display: none;
+  }
+}
