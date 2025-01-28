@@ -1,104 +1,67 @@
-import React from "react";
-import "../styles/index.css";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { Line } from "./construct";
-import { Cost } from "./construct";
-import "../styles/contact.css";
-const ContactPage = () => {
-  return (
+import { Link } from "react-router-dom"
+import { Contact, Footer } from "./construct"
+import '../styles/contact.css'
+function ContactPage(){
+  return(
     <>
-      <div className="hero-section1">
-        <div className="int">
-          <p>🏍Contact us today</p>
+      <div className="overall">
+        <div className="head">
+          <h1>Contact Us</h1>
         </div>
-        <div className="hero-sect1">
-          <h1 className="chang">OTAX SERVICES</h1>
+        <div className="contact-detal">
+          <div className="con-hero1">
+            <button>Get in touch</button>
+            <h1>We would like to hear to hear from you.</h1>
+            <p>We're here to help Whether you have questions about our services,need support,or want to learn more about joining our network, feel free to reach out through any of the options below.</p>
+          </div>
+
+          <div className="con-hero2">
+            <div className="container1">
+            <div className="contd">
+              <div className="logo">
+
+              </div>
+              <h3>Chat our support</h3>
+              <p>We are here to help</p>
+              <Link to="whatsapp-link">Chat on Whtasapp</Link>
+            </div>
+
+            <div className="contd">
+              <div className="logo">
+
+              </div>
+              <h3>Call us</h3>
+              <p>Mon-Fri from 8am to 5pm</p>
+              <Link to="whatsapp-link">+2349153383705</Link>
+            </div>
+            </div>
+           
+
+            <div className="container2">
+            <div className="contd">
+              <div className="logo">
+
+              </div>
+              <h3>Send us a mail</h3>
+              <p>Speak to us via mail</p>
+              <Link to="contact@osdin.net">Contact@osdin.net</Link>
+            </div>
+
+            <div className="contd">
+              <div className="logo">
+
+              </div>
+              <h3>Social Media</h3>
+              <p>Connect with us</p>
+            </div>
+            </div>
+           
+          </div>
         </div>
       </div>
-
-      <div className="contact-us">
-        <h3>CONTACT US</h3>
-        <p>Get in touch with us easily</p>
-      </div>
-      <div className="total-contact">
-        <div className="number">
-          <Line cont="UK NUMBERS:" num1="+001-2463-957" num2="+001-4345-342" />
-          <Line cont="USA NUMBERS:" num1="+001-2463-643" num2="+001-4356-643" />
-          <Line
-            cont="EMAIL ADDRESS:"
-            num1="Suppoert@otax.com"
-            num2="info@otax.com"
-          />
-        </div>
-
-        <div className="email_collect">
-          <div className="collect-add">
-            <h3>SEND US A MESSAGE</h3>
-            <Cost val=" " place="FULLNAME" />
-            <Cost val="" place="EMAIL" />
-            <Cost val=":" place="PHONE" />
-            <textarea name="" id="" placeholder="MESSAGE"></textarea>
-          </div>
-          <button>SEND MESSAGE</button>
-        </div>
-      </div>
-
-      <footer>
-        <div className="combine-foot">
-          <div className="Otax">
-            <h1> OTAX SERVICES </h1>
-            <p className="our">
-              Our altimate goal is to provide customers with <br /> the ultimate
-              satisfaction they deserve and giving them <br /> a nice value for
-              their money.
-            </p>
-          </div>
-          <div className="quick">
-            <h2>Quick links</h2>
-            <li>
-              <NavLink>About us</NavLink>
-            </li>
-            <li>
-              <NavLink>Contact us</NavLink>
-            </li>
-            <li>
-              <NavLink>Careers</NavLink>
-            </li>
-            <li>
-              <NavLink>Become a partner</NavLink>
-            </li>
-          </div>
-          <div className="community">
-            <h2>Documents</h2>
-            <li>
-              <NavLink>Supports</NavLink>
-            </li>
-            <li>
-              <NavLink>Faqs</NavLink>
-            </li>
-            <li>
-              <NavLink>Privacy Policy</NavLink>
-            </li>
-            <li>
-              <NavLink>Terms & condition</NavLink>
-            </li>
-          </div>
-          <div className="follow">
-            <NavLink>
-              <img src="/Images/PAYMENT-3.png" alt="" />
-            </NavLink>
-            <Link>
-              <img src="/Images/PAYMENT-2.png" alt="" />
-            </Link>
-
-            <img src="/Images/PAYMENT-1.png" alt="" />
-          </div>
-        </div>
-        <p>Copyrights &copy; 2024 OTAXY. Buld by Chris Tech</p>
-      </footer>
+      <Footer />
     </>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage

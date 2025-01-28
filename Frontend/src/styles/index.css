@@ -51,18 +51,19 @@ nav button{
   cursor: pointer;
 }
 .menu .bar{
-  width: 1.7rem;
-  color: black;
-  background-color: black;
-  line-height: 3px;
-  border: 2.222px solid black;
+  width: 1.3rem;
+  border: 1px solid black;
 }
-.menu .bar1{
-  @keyframes change {
-    60%{
-    
-    }
-  }
+
+.bar:nth-child(1){
+  transform-origin: top left;
+}
+.bar:nth-child(2){
+  transform-origin: center;
+  opacity: 1;
+}
+.bar:nth-child(3){
+  transform-origin: bottom left;
 }
 
 .dropdown{
@@ -137,7 +138,7 @@ button{
   .dropdown li{
   padding: 0.5rem 1rem;
   }
-  button{
+  .logbtn{
     display: none;
   }
 }

@@ -1,90 +1,75 @@
-.hero-section1{
-  padding: 2rem 5rem;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.overall{
+  padding: 2rem 10rem;
+  background-image: url('/Images/ellipse.png');
+  background-position: center;
+
 }
 
-.int p{
-  background-color: rgba(128, 128, 128, 0.127);
-  width: fit-content;
-  color: #414141;
+.head h1{
+  color: rgb(0, 0, 88);
+  text-align: center;
+}
+
+
+
+.contact-detal{
+ background-color: rgb(255, 255, 255);
+ padding: 2rem 5rem;
+ border-radius: 2rem;
+ display: flex;
+ align-items: center ;
+ gap: 10rem;
+}
+.contd{
+  border: 2px solid lightgray;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+}
+.contd h3{
   font-size: 1em;
-  padding: 0.4rem 0.7rem;
-  border-radius: 0.7rem;
+  font-weight: 900;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
 }
-.contact-us{
-  padding: 0 5rem;
-}
-.contact-us h3{
-  letter-spacing: 2px;
-  font-weight: 800;
-}
-.contact-us p{
+.contd p{
+  font-size: 0.7em;
+  font-weight: 900;
   color: gray;
-  font-size: 0.8em;
 }
 
-.total-contact{
+.container1,.container2{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 5rem;
+  gap: 1rem;
+  color: rgb(0, 0, 70);
 }
 
-.line{
-  display: flex;
-  gap: 0.5rem;
-}
-.linn{
-  margin-bottom: 2rem;
-}
 
-.collect-add input{
-  width: 20rem;
-  height: 2.5rem;
-  padding: 0 0.5rem;
-  border: 1px solid gray;
-  outline: none;
-  border-radius: 0.3rem;  height: 2.5rem;
-  padding: 0.2rem;
 
-}
-.collect-add textarea{
-  width: 20rem;
-  height: 5rem;
-  padding: 0 0.5rem;
-  border: 1px solid gray;
-  outline: none;
-  border-radius: 0.3rem;  
-  padding: 0.2rem;
-
-}
-.email_collect button{
-    padding: 0.5rem;
-    width: 15rem;
-    height: 2.5rem;
-    margin: 2rem 0;
-    border-radius: 0.3rem;
-    border: 1px solid rgb(0, 150, 0);
-    background-color: #ffff;
+.con-hero1 button{
+  background-color: rgba(173, 216, 230, 0.455);
+  color: darkblue;
+  border-radius: 0.4rem;
+  border: none;
+  font-weight: bolder;
+  margin: 1rem 0;
 }
 
-.email_collect button:hover{
-    background-color: rgb(0, 151, 0);
-    color: white;
-    transition: all ease-in 0.15s;
+.con-hero1 h1{
+  font-size: 1.8em;
+  font-weight: bolder;
 }
 
-@media screen and (max-width:900px) {
-  .hero-section1{
-    padding: 1rem;
-  }
-  .contact-us{
-    padding: 1rem;
-  }
-
-  .total-contact{
-    flex-direction: column;
-    padding: 1rem;
-    justify-content: left;
-  }
-  
+.con-hero1 p{
+  font-size: 1em;
+  font-weight: bolder;
+  padding: 1.5rem 0;
 }

@@ -36,9 +36,9 @@ function Navbar(){
         <NavLink to="/contact">Contact Us</NavLink>
       </li>  
     </ul>
-    <NavLink to="/login"><button >Login</button> </NavLink>
+    <NavLink to="/login"><button className='logbtn' >Login</button> </NavLink>
       
-          <div className="menu" onClick={Menu}>
+          <div className={ "menu"} onClick={Menu}>
             <div className="bar bar1"></div>
             <div className="bar bar2"></div>
             <div className="bar bar3"></div>
@@ -62,6 +62,9 @@ function Navbar(){
               </li>
               <li>
                 <Link to="/contact"  onClick={Menu}>Contact</Link>
+              </li>
+              <li>
+                <Link to="/login"  onClick={Menu}>Login</Link>
               </li>
             </ul>
           </div>
