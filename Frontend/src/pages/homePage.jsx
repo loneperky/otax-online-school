@@ -2,6 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import { Footer } from "./construct";
 import { useEffect, useId, useState } from "react";
 import axios from "axios";
+import { FaWhatsapp } from "react-icons/fa";
 import '../styles/app.css'
 function HomePage() {
 
@@ -25,8 +26,8 @@ function HomePage() {
           <img className="img3" src="/Images/hero 3.png" alt="" /><br />
           <img className="img4" src="/Images/hero4.png" alt="" /><br />
         </div>
+   
       </div>
-
       <div className="section2">
         <div className="sub-section">
           <div className="hero3">

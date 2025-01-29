@@ -55,7 +55,7 @@ function Navbar(){
                 <Link  to="/about-us" onClick={Menu}>Developer Incubator</Link>
               </li>
               <li>
-                <Link  to="/tracking" onClick={Menu}>Hire a Developer</Link>
+                <Link  to="/developers" onClick={Menu}>Hire a Developer</Link>
               </li>
               <li>
                 <Link  to="/pricing-plans" onClick={Menu}>About us </Link>

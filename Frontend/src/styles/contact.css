@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 .overall{
-  padding: 2rem 10rem;
+  padding: 2rem 5em;
   background-image: url('/Images/ellipse.png');
   background-position: center;
 
+}
+
+body{
+  font-family: sans-serif;
 }
 
 .head h1{
@@ -29,30 +33,40 @@
   border: 2px solid lightgray;
   padding: 0.5rem;
   margin: 1rem 0;
-  border-radius: 0.3rem;
-  width: 10rem;
-  height: 10rem;
-  cursor: pointer;
+  border-radius: 0.5rem;
+  width: 14rem;
+  height: 12rem;
+
 }
 .contd h3{
   font-size: 1em;
   font-weight: 900;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-bottom: 0.3rem;
 }
 .contd p{
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 900;
   color: gray;
 }
 
 .container1,.container2{
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   color: rgb(0, 0, 70);
 }
 
+.contd a{
+  font-size: 1em;
+  padding-bottom: 10rem;
+}
 
+.log{
+  border: 1px solid lightgray;
+  width: fit-content;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+}
 
 .con-hero1 button{
   background-color: rgba(173, 216, 230, 0.455);
@@ -72,4 +86,11 @@
   font-size: 1em;
   font-weight: bolder;
   padding: 1.5rem 0;
+}
+
+.logg,.contd a{
+  display: flex;
+  gap: 1rem;
+  padding: 2.5em 0;
+  text-decoration: underline;
 }

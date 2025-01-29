@@ -1,9 +1,13 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/* body{
+  font-family: 'Roboto',sans-serif;
+} */
 .section1{
   display: flex;
   justify-content: space-around;
@@ -139,13 +143,12 @@ p{
   border-radius: 0.3rem;
 }
 .mini{
-  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   text-align: center;
-  padding: 2rem 8rem;
+  padding: 8rem;
   color: white;
   border-radius: 2rem;
   background-image: url('/Images/blue.svg');
