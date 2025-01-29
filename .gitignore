@@ -12,8 +12,6 @@ yarn-error.log*
 
 Frontend/.env
 Backend/.env
-package-lock.json
-node_modules
 Frontend/.cache/
 Backend/.cache/
 *.tmp/
