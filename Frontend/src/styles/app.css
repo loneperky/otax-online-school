@@ -5,9 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* body{
+body{
   font-family: 'Roboto',sans-serif;
-} */
+}
 .section1{
   display: flex;
   justify-content: space-around;

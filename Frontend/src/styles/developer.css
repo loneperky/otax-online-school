@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  scrollbar-color: blue;
+  scrollbar-width: 1rem;
+  scroll-behavior: smooth;
+}
+
+.overall-view{
+  padding: 3rem 10rem;
+  background-color: white;
+  background-image: url('/Images/ellipse.png');
+  background-position: center;
+  display: flex;
+  gap: 7rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.overall-view h1{
+  font-size: 2em;
+}
+.top p{
+  padding: 0.5rem 0;
+  font-weight: lighter;
+}
+.top .pic{
+  color: blue;
+  padding: 0.5rem 0;
+}
+
+.top-courses{
+  display: flex;
+  padding: 0.5rem 0;
+  gap: 0.5rem;
+}
+.couser1{
+  width: 12rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+
+.couser1 h4{
+  padding: 1rem 0;
+  font-weight: 550;
+  color: rgb(0, 0, 84);
+}
+
+.form h1{
+  font-size: 1.6em;
+}
+
+.form p{
+  font-size: 1em;
+  font-weight: 400;
+  padding-top: 0.2rem;
+  padding-bottom: 0.8rem;
+}
+
+label,input{
+  display: block;
+}
+label{
+  font-size: 0.87em;
+  padding: 0.2rem 0;
+}
+input{
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid lightgrey;
+  outline: none;
+  width: 15rem;
+  margin-bottom: 0.5rem;
+}
+.form button{
+  height: 2rem;
+  width: 15rem;
+  border-radius: 0.3rem;
+  border: none;
+  margin-top: 1rem;
+  color: blue;
+  cursor: pointer;
+}
