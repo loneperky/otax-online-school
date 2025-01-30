@@ -69,15 +69,15 @@ const Developer = () => {
           <p>Fill in your details to apply now</p>
           <form>
             <label htmlFor="Fullname">Fullname</label>
-            <input type="text" autoFocus="on" placeholder='John Doe' required/>
+            <input type="text"  placeholder='John Doe' required/>
             <label htmlFor="Email">Email</label>
             <input type="email" placeholder='johndoe@gmail.com' required/>
-            <button>{ 'Apply Now'}</button>
+            <button className='appbtn'>{ 'Apply Now'}</button>
           </form>
         </div>
       </div>
     </div>
-     <Footer />
+     {/* <Footer /> */}
     
     </>
   )

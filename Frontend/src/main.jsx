@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage'
 import ErrorPage from './pages/404'
 import Dashboard from './pages/dashboard'
 import Developer from './pages/Developer'
-
+import Login from './pages/Login'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
@@ -18,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/dashboard' element={<Dashboard />}/>
          <Route path='/contact' element={<ContactPage />}/>
          <Route path='/developers' element={<Developer />}/>
+         <Route path='/login' element={<Login />}/>
          <Route path='/*' element={<ErrorPage />}/>
         </Routes>
     </Router>

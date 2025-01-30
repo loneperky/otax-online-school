@@ -5,9 +5,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Roboto',sans-serif;
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust width */
 }
+
+/* Background color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray */
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: blue; /* Darker gray */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Even darker */
+}
+
 .section1{
   display: flex;
   justify-content: space-around;

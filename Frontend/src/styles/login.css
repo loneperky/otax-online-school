@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.login-overview{
+  background-image: url('/Images/ellipse.png');
+  padding: 2rem 5rem;
+}
+
+.login-details{
+  padding: 5rem 8rem;
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+
+.first-sect button{
+  color: rgba(0, 0, 255, 0.814);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bolder;
+}
+
+.first-sect h2{
+  font-size: 2em;
+  padding: 1rem 0;
+  font-weight: bolder;
+}
+
+.first-sect p{
+  padding: 0.5rem 0;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.login h3{
+  font-size: 1.5em;
+}
+
+.login p{
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+}
+.login a{
+  text-align: left;
+  padding: 1rem 0;
+}
+.login button{
+  border: none;
+  width: 15rem;
+  border-radius: 0.5rem;
+  background-color: blue;
+  color: white;
+  margin-top: 1rem;
+  cursor: pointer;
+}

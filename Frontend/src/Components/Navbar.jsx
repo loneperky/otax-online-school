@@ -26,7 +26,7 @@ function Navbar(){
        <NavLink to="/developers">Developer Incubator</NavLink>
       </li>
       <li>
-        <NavLink to="/tracking">Hire a Developer</NavLink>
+        <a href="https://wa.me/2349126785031?text=I%20Want%20to%20Develop%20A%20Website" target='__blank'>Hire a Developer</a>
       </li> 
 
       <li>
@@ -52,13 +52,13 @@ function Navbar(){
               </li>
               
               <li>
-                <Link  to="/about-us" onClick={Menu}>Developer Incubator</Link>
+                <Link  to="/developers" onClick={Menu}>Developer Incubator</Link>
               </li>
               <li>
-                <Link  to="/developers" onClick={Menu}>Hire a Developer</Link>
+              <a href="https://wa.me/2349126785031?text=I%20Want%20to%20Develop%20A%20Website" target='__blank'>Hire a Developer</a>
               </li>
               <li>
-                <Link  to="/pricing-plans" onClick={Menu}>About us </Link>
+                <Link  to="/about" onClick={Menu}>About us </Link>
               </li>
               <li>
                 <Link to="/contact"  onClick={Menu}>Contact</Link>
