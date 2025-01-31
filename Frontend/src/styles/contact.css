@@ -94,3 +94,32 @@ body{
   padding: 2.5em 0;
   text-decoration: underline;
 }
+
+@media screen and (max-width:900px) {
+  .contact-detal{
+    flex-direction: column;
+    padding: 0rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .contact-detal{
+    flex-direction: column;
+    padding: 0rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .overall{
+    padding: 1rem;
+  }
+  .container1,.container2{
+    flex-wrap: wrap;
+  }
+
+  .contd{
+    width: 100%;
+    box-shadow: 3px 3px 4px 0.5px rgba(146, 146, 146, 0.155);
+  }
+}

@@ -9,12 +9,14 @@ import ErrorPage from './pages/404'
 import Dashboard from './pages/dashboard'
 import Developer from './pages/Developer'
 import Login from './pages/Login'
+import AboutPage from './pages/AboutPage'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Navbar />
         <Routes>
          <Route path='/' element={<HomePage />}/>
+         <Route path='/about' element={<AboutPage />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
          <Route path='/contact' element={<ContactPage />}/>
          <Route path='/developers' element={<Developer />}/>

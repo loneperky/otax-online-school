@@ -3,11 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  scrollbar-color: blue;
-  scrollbar-width: 1rem;
-  scroll-behavior: smooth;
-}
+
 
 .overall-view{
   padding: 1rem 10rem;
@@ -16,7 +12,7 @@ body{
   background-image: url('/Images/ellipse.png');
   background-position: center;
   display: flex;
-  gap: 7rem;
+  gap: 5rem;
   justify-content: space-around;
   align-items: center;
 }
@@ -65,32 +61,33 @@ body{
   padding-top: 0.2rem;
   padding-bottom: 0.8rem;
 }
-
-label,input{
+.get-started label,input{
   display: block;
 }
-label{
+
+.get-started label{
   font-size: 0.87em;
   padding: 0.2rem 0;
 }
-input{
+.get-started input{
   height: 2.5rem;
   padding: 0.5rem;
   border-radius: 0.3rem;
   border: 1px solid lightgrey;
   outline: none;
-  width: 15rem;
+  width: 17rem;
   margin-bottom: 0.5rem;
 }
-.form button{
+.get-started button{
   height: 2.5rem;
-  width: 15rem;
+  width: 17rem;
   border-radius: 0.3rem;
   border: 1px solid rgb(41, 177, 222);
   margin-top: 1rem;
   color: blue;
   background-color: white;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width:900px) {
@@ -111,7 +108,7 @@ input{
     font-size: 2em;
   }
   .form input{
-    width: 25rem;
+    width: 100%;
     height: 2.5rem;
   }
 }
@@ -121,7 +118,6 @@ input{
     padding: 1rem;
     gap: 1rem;
     flex-direction: column;
-    align-items: flex-start;
   }
 
 
@@ -133,11 +129,10 @@ input{
     width: 100%;
 
   }
- 
-   input{
-    width: 22rem;
-    height: 2.5rem;
+  .get-started input{
+    width: 100%;
   }
+ 
 
   
 }

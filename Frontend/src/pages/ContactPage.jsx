@@ -28,7 +28,7 @@ function ContactPage() {
               network, feel free to reach out through any of the options below.
             </p>
           </div>
-
+            
           <div className="con-hero2">
             <div className="container1">
               <div className="contd">
@@ -37,7 +37,13 @@ function ContactPage() {
                 </div>
                 <h3>Chat our support</h3>
                 <p>We are here to help</p>
-                <Link to="whatsapp-link">Chat on Whtasapp</Link>
+
+                <a
+                  href="https://wa.me/2349126785031?text=I%20Want%20to%20Learn%20Web%20Development"
+                  target="_blank"
+                >
+                  Chat On WhatsApp
+                </a>
               </div>
 
               <div className="contd">
@@ -46,7 +52,9 @@ function ContactPage() {
                 </div>
                 <h3>Call us</h3>
                 <p>Mon-Fri from 8am to 5pm</p>
-                <Link to="whatsapp-link">+234-9153383705</Link>
+                <a href="tel:2349153383705" target="_blank">
+                  Call us Now
+                </a>
               </div>
             </div>
 
@@ -57,7 +65,9 @@ function ContactPage() {
                 </div>
                 <h3>Send us a mail</h3>
                 <p>Speak to us via mail</p>
-                <Link to="contact@osdin.net">Contact@osdin.net</Link>
+                <a href="mailto:otasowiechristian@gmail.com" target="_blank">
+                  Send us an Email
+                </a>
               </div>
 
               <div className="contd">
@@ -67,10 +77,10 @@ function ContactPage() {
                 <h3>Social Media</h3>
                 <p>Connect with us</p>
                 <div className="logg">
-                  <FaFacebook />
-                  <FaInstagram />
-                  <FaTiktok />
-                  <FaTwitter />
+                  <FaFacebook style={{cursor:'pointer'}}/>
+                  <FaInstagram  style={{cursor:'pointer'}}/>
+                  <FaTiktok  style={{cursor:'pointer'}}/>
+                  <FaTwitter  style={{cursor:'pointer'}}/>
                 </div>
               </div>
             </div>

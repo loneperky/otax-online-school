@@ -195,13 +195,15 @@ footer{
   color: white;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   .section1{
     flex-direction: column;
     padding: 1rem;
+
   }
   .section1 .hero2{
     flex-direction: column;
+    align-items: flex-start;
   }
   .hero2 img{
     /* border-radius: 0.9rem;
@@ -212,10 +214,12 @@ footer{
   .sub-section2{
     flex-direction: column;
     padding: 2rem 1rem;
+    align-items: flex-start;
   }
   .sub-section{
     flex-direction: column;
     padding: 2rem 1rem;
+    align-items: flex-start;
   }
   .hero2{
     padding: 0 1rem;
