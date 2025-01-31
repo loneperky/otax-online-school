@@ -21,8 +21,12 @@ const Login = () => {
             <label htmlFor="email">Email</label>
             <input type="email" required placeholder='johndoe@gmail.com' />
             <label htmlFor="password">Password</label>
+            <div className="password-eye">
             <input type="password" required placeholder='******'/>
-            {/* <FaEye /> */}
+             <FaEye style={{position:'relative',top:'-2.3rem',left:'18rem'}}/>
+             <div className="sroke"></div>
+            </div>
+           
             <p><Link to="/forgot-password">Forgot Password?</Link></p>
             <button>Login to Continue</button>
           </form>
