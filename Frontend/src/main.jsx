@@ -1,4 +1,5 @@
 import React from 'react'
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 import ReactDOM from 'react-dom/client'
 import { StrictMode } from 'react'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
@@ -8,7 +9,7 @@ import ContactPage from './pages/ContactPage'
 import ErrorPage from './pages/404'
 import Dashboard from './pages/dashboard'
 import Developer from './pages/Developer'
-import Login from './pages/Login'
+import Login from './pages/login'
 import AboutPage from './pages/AboutPage'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
