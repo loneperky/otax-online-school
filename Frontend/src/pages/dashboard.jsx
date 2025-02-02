@@ -1,37 +1,48 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import supabase from "../../Supabase/supabaseClient";
 
-const Dashboard = () => {
-  const [user, setUser] = useState(null);
+function Dashboard({ authUser }) {
+  const [userData, setUserData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const token = localStorage.getItem("token");
-      if (!token) return;
+    async function fetchUserProfile() {
+      if (!authUser) return; // Don't fetch if no user
 
-      try {
-        const response = await axios.get("http://localhost:3000/auth/dashboard", {
-          headers: { "auth-token": token },
-        });
-        setUser(response.data);
-      } catch (err) {
-        console.error(err);
+      const { data, error } = await supabase
+        .from("users_information")
+        .select("*")
+        .eq("id", authUser.id)
+        .single();
+
+      if (error) {
+        console.error("Error fetching profile:", error.message);
+      } else {
+        setUserData(data);
       }
-    };
+    }
 
-    fetchData();
-  }, []);
+    fetchUserProfile();
+  }, [authUser]);
 
-  if (!user) return <p>Loading...</p> 
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    navigate("/login");
+  }
+
   return (
-    <>
-        <h1>Welcome, {user.fullname}</h1>
-        <p>{user}</p>
-        <button type="submit">LogOut</button>
-    </>
-  )
-
-};
-
+    <div>
+      {userData ? (
+        <>
+          <h1>Welcome, {userData.fullname}!</h1>
+          <button onClick={handleLogout}>Logout</button>
+        </>
+      ) : (
+        navigate('/login')
+      )}
+    </div>
+  );
+}
 
 export default Dashboard;
