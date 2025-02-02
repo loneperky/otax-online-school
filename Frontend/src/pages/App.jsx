@@ -7,7 +7,7 @@ import ContactPage from './ContactPage'
 import ErrorPage from './404'
 import Dashboard from './dashboard'
 import Developer from './Developer'
-import Login from "./Login";
+import Login from "./login";
 import AboutPage from './AboutPage'
 import ProtectedRoute from './ProtectedRoute'
 import { Navigate } from "react-router-dom";
