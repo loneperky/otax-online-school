@@ -2,14 +2,32 @@ import { NavLink, Link } from "react-router-dom";
 import { Footer } from "./construct";
 import { useEffect, useId, useState } from "react";
 import axios from "axios";
+import AOS from 'aos'
+import gsap from 'gsap'
 import { FaWhatsapp } from "react-icons/fa";
 import '../styles/app.css'
 function HomePage() {
 
+  useEffect(() => {
+    // Initialize AOS animations
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // GSAP Page Load Animation
+    gsap.from(".section1", {
+      opacity: 0.7,
+      scale: 0.95,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+  }, []);
+
   return (
     <>
      <div className="overall-section1">
-      <div className="section1">
+      <div className="section1" data-aos="fade-up">
         <div className="hero1">
           <h1>Startups Can Now Scale Faster.</h1>
           <p>Connecting <Link>Top Developers</Link> with Global Projects,fueling innovations and success for all.</p>
@@ -28,7 +46,7 @@ function HomePage() {
         </div>
    
       </div>
-      <div className="section2">
+      <div className="section2"  data-aos="fade-right">
         <div className="sub-section">
           <div className="hero3">
             <h1>Join Our Developer Pool</h1>
@@ -42,7 +60,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="section2">
+      <div className="section2"  data-aos="fade-rigt">
         <div className="sub-section2">
       
           <div className="hero4">
@@ -60,7 +78,7 @@ function HomePage() {
       
       </div>
       <div className="section2">
-        <div className="sub-section2">
+        <div className="sub-section2"  data-aos="fade-botton">
           <div className="hero3">
             <button className="btnt">Talent Pool</button>
             <h1>Empower Your Startup<br /> with Top Talents</h1>

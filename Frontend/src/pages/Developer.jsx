@@ -15,39 +15,8 @@ const Developer = () => {
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [message,setMessage] = useState('')
-  async function HandleSignUp(event) {
-    event.preventDefault();
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password
-    });
 
-    if(error){
-      alert('Signup Failed', error.message)
-      console.log(error)
-      setMessage('signup Failed')
-    }else{
-      console.log(data)
-      alert('Check your email to continue')
-      setMessage('check your email')
-      return;
-    }
-    if(data?.user){
-      const {error: profileError} = await supabase.from('users_informations').insert([
-        {
-          id:data.user.id,
-          password:password,
-          email:email,
-          fullname:fullname
-        }
-      ])
-    }
-    if(error){
-      alert('Profile creation failed')
-    }else{
-      navigate('/dasboard')
-    }
-  }
+ 
  
   return (
     <>
@@ -124,52 +93,6 @@ const Developer = () => {
             </div>
           </div>
 
-          <div className="get-started">
-            <h1>Get Started Now</h1>
-            <p>Fill in your details to apply now</p>
-            <form >
-              <label htmlFor="Fullname">Fullname</label>
-              <input 
-              type="text"
-               onChange={(e)=>setFullname(e.target.value)}  placeholder="John Doe"
-                required 
-                value={fullname}
-                />
-
-              <label htmlFor="Email">Email</label>
-              <input 
-              type="email" 
-              onChange={(e)=>setEmail(e.target.value)} placeholder="Johndoe@gmail.com"
-              value={email} 
-              required />
-
-             <div className="password-eye">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  required
-                  placeholder="******"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-
-                <div
-                  onClick={() => setShowPassword((prev) => !prev)}
-                  className="sroke"
-                  style={{
-                    position: "relative",
-                    top: "-2.3rem",
-                    left: "18rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  {showPassword ? <FaEye /> : <FaEyeSlash />}
-                </div>
-              </div>
-
-              <button onClick={HandleSignUp} className="appbtn">{'Apply Now'}</button>
-              <p style={{color:'red'}}>{message}</p>
-            </form>
-          </div>
         </div>
       </div>
       <Footer />

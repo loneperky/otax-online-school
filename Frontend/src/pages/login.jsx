@@ -17,8 +17,8 @@ const Login = () => {
     event.preventDefault();
 
     const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
+      email:email,
+      password:password,
     });
 
     if(error){
@@ -83,6 +83,7 @@ const Login = () => {
               </p>
 
               <button onClick={HandleLogin}>Login to Continue</button>
+              <p>Don't have an account?<Link to="/signup">Signup</Link></p>
             </form>
           </section>
         </div>
