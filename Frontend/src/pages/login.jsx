@@ -45,7 +45,7 @@ const Login = () => {
           <section className="logins">
             <h3>Welcome Back</h3>
             <p>Login to your account</p>
-            <form >
+            <form onSubmit={HandleLogin}>
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -64,7 +64,7 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <div
+                {/* <div
                   onClick={() => setShowPassword((prev) => !prev)}
                   className="sroke"
                   style={{
@@ -75,15 +75,15 @@ const Login = () => {
                   }}
                 >
                   {showPassword ? <FaEye /> : <FaEyeSlash />}
-                </div>
+                </div> */}
               </div>
 
-              <p>
+              <p className="forgot">
                 <Link to="/forgot-password">Forgot Password?</Link>
               </p>
 
-              <button onClick={HandleLogin}>Login to Continue</button>
-              <p>Don't have an account?<Link to="/signup">Signup</Link></p>
+              <button>Login to Continue</button>
+              <p className="signup">Don't have an account?<Link to="/signup">Signup</Link></p>
             </form>
           </section>
         </div>

@@ -81,6 +81,23 @@
   opacity: 0.7;
 }
 
+.forgot a{
+  color: darkblue;
+}
+.signup a{
+  color: #555;
+}
+.forgot a:hover{
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.signup a:hover{
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
 @media screen and (max-width:900px) {
   .login-details{

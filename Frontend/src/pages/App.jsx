@@ -9,7 +9,7 @@ import ErrorPage from "./404";
 import Dashboard from "./dashboard";
 import Developer from "./Developer";
 import Login from "./login";
-import Signup from "./SignUp";
+import Signup from "./Signup";
 import AboutPage from "./AboutPage";
 import ProtectedRoute from "./ProtectedRoute";
 import { Navigate } from "react-router-dom";

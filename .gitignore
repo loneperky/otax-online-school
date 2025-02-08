@@ -23,6 +23,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
-
+.env
+node_modules
+.package-lock.json
 Frontend/debug.log
 Backend/debug.log

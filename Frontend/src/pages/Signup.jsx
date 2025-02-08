@@ -15,7 +15,7 @@ const Signup = () => {
     const [fullname, setFullname] = useState("");
     const [message,setMessage] = useState('Please enter your details')
     const [Reg,setReg] = useState(false)
-
+       
     const colorChange = () =>{
       setColor('red')
     }

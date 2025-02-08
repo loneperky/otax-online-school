@@ -8,26 +8,26 @@ import { FaWhatsapp } from "react-icons/fa";
 import '../styles/app.css'
 function HomePage() {
 
-  useEffect(() => {
-    // Initialize AOS animations
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+  // useEffect(() => {
+  //   // Initialize AOS animations
+  //   AOS.init({
+  //     duration: 1000,
+  //     once: true,
+  //   });
 
-    // GSAP Page Load Animation
-    gsap.from(".section1", {
-      opacity: 0.7,
-      scale: 0.95,
-      duration: 1.5,
-      ease: "power2.out",
-    });
-  }, []);
+  //   // GSAP Page Load Animation
+  //   gsap.from(".section1", {
+  //     opacity: 0.7,
+  //     scale: 0.95,
+  //     duration: 1.5,
+  //     ease: "power2.out",
+  //   });
+  // }, []);
 
   return (
     <>
      <div className="overall-section1">
-      <div className="section1" data-aos="fade-up">
+      <div className="section1">
         <div className="hero1">
           <h1>Startups Can Now Scale Faster.</h1>
           <p>Connecting <Link>Top Developers</Link> with Global Projects,fueling innovations and success for all.</p>
