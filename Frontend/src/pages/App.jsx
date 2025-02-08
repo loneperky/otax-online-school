@@ -13,6 +13,8 @@ import Signup from "./Signup";
 import AboutPage from "./AboutPage";
 import ProtectedRoute from "./ProtectedRoute";
 import { Navigate } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
+// import AnalyticsTracker from '../Components/Analytic'
 
 function App() {
   const [authUser, setAuthUser] = useState(null);
@@ -46,6 +48,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Analytics />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
