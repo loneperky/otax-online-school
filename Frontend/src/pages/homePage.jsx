@@ -8,30 +8,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import '../styles/app.css'
 function HomePage() {
 
-  // useEffect(() => {
-  //   // Initialize AOS animations
-  //   AOS.init({
-  //     duration: 1000,
-  //     once: true,
-  //   });
-
-  //   // GSAP Page Load Animation
-  //   gsap.from(".section1", {
-  //     opacity: 0.7,
-  //     scale: 0.95,
-  //     duration: 1.5,
-  //     ease: "power2.out",
-  //   });
-  // }, []);
-
   return (
     <>
      <div className="overall-section1">
       <div className="section1">
         <div className="hero1">
           <h1>Startups Can Now Scale Faster.</h1>
-          <p>Connecting <Link>Top Developers</Link> with Global Projects,fueling innovations and success for all.</p>
-          <p></p>
+          <p>Connecting <Link>Top Developers</Link> with Global Projects,fueling innovations and success for All.</p>
           <div className="btns">
             <Link to="/developers"><button className="btn1">Developer Incubator</button></Link>
             <Link to="/login"><button className="btn2">Login</button></Link>
@@ -69,10 +52,10 @@ function HomePage() {
 
           <div className="hero3">
             <button className="btnt">Talent Pool</button>
-            <h1>Top Talent Meets <br /> Global Opportunities</h1>
+            <h1>Top Talent Meets Global Opportunities</h1>
             <p>We bridge the gap between talented developers and companies that need their skills startups worldwide.</p>
-            <p></p>
-            <button className="btn3">About Us</button>
+            <Link to="/about"> <button className="btn3">About Us</button> </Link>
+           
           </div>
         </div>
       
@@ -81,10 +64,10 @@ function HomePage() {
         <div className="sub-section2"  data-aos="fade-botton">
           <div className="hero3">
             <button className="btnt">Talent Pool</button>
-            <h1>Empower Your Startup<br /> with Top Talents</h1>
+            <h1>Empower Your Startup with Top Talents</h1>
             <p>Partner with us to access skilled developers who drive solutions.</p>
             <p>  success through cost-effecctive, innovative, and scalable.</p>
-            <button className="btn3">Hire a Developer</button>
+            <button className="btn3">  <a href="https://wa.me/2349126785031?text=I%20Want%20to%20Hire%20A%20Developer" target='_blank'>Hire a Developer</a></button>
           </div>
           
           <div className="hero4">
@@ -99,8 +82,8 @@ function HomePage() {
             <h1>Empowering Global Tech  Talent for  Inovation</h1>
             <p>Whether you're joing our talent pool or ypu are a skilled developer-Frontend Web Development, Backend Web Development,Android App Development and iOS App Development, we support your growth.</p>
             <div className="bt">
-            <Link to="/developers"><button className="btn2">Become a Developer</button> </Link>
-            <Link to="/Login"> <button className="btn4">Already a Developer</button></Link>
+            <Link to="/developers"><button className="btnB">Become a Developer</button> </Link>
+            <Link to="/Login"> <button className="btnA">Already a Developer</button></Link>
             </div>
             
           </div>

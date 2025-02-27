@@ -27,12 +27,12 @@ article p{
   line-height: 1.5rem;
   font-weight: 200;
   font-size: 1.1em;
-  color: rgba(60, 60, 60, 0.752);
+  color: rgba(10, 10, 10, 0.869);
 }
 
 @media screen and (max-width:900px) {
   .overallpage{
-    padding: 0.5rem;
+    padding: 0rem;
   }
   .about-overview{
     padding: 1rem;

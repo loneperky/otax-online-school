@@ -107,14 +107,17 @@
     padding: 0.5rem 0;
     align-items: flex-start;
   }
+  .login-details{
+    align-items: center;
+  }
   .login-overview{
     padding: 1rem;
   }
   .login-details input{
-    width: 20rem;
+    width: 22.5rem;
   }
   .logins button{
-    width: 20rem;
+    width: 22.5rem;
   }
 }
 /*

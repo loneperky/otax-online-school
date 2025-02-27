@@ -8,10 +8,11 @@ function Navbar(){
    function Menu(){
       setShow(!Show)
    }
-
+        
     return(
-      
+     
    <>
+   
     <nav>
      
     <div className="logo">

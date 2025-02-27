@@ -10,11 +10,13 @@ import Dashboard from "./dashboard";
 import Developer from "./Developer";
 import Login from "./login";
 import Signup from "./Signup";
+import Forgot from "./forgot";
 import AboutPage from "./AboutPage";
 import ProtectedRoute from "./ProtectedRoute";
 import { Navigate } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-// import AnalyticsTracker from '../Components/Analytic'
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 
 function App() {
   const [authUser, setAuthUser] = useState(null);
@@ -46,9 +48,11 @@ function App() {
   if (loading) return <div className="">loading ...</div>;
 
   return (
+    
     <Router>
       <Navbar />
-      <Analytics />
+      {/* <SpeedInsights /> */}
+      {/* <Analytics /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -81,7 +85,15 @@ function App() {
           }
         />
         <Route
-          path="*"
+          path="/forgot-password"
+          element={
+            <AuthLayout>
+              <Forgot />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/*"
           element={<Navigate to={authUser ? "/dashboard" : "/login"} replace />}
         />
       </Routes>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaEye,FaEyeSlash,FaApple,FaGoogle,FaFacebook } from 'react-icons/fa';
 import '../styles/signup.css'
@@ -16,47 +16,52 @@ const Signup = () => {
     const [message,setMessage] = useState('Please enter your details')
     const [Reg,setReg] = useState(false)
        
-    const colorChange = () =>{
-      setColor('red')
-    }
-
+  
   async function HandleSignUp(event) {
-     event.preventDefault();
-     const { data, error } = await supabase.auth.signUp({
-       email:email,
-       password:password,
-       options:{
-         emailRedirectTo:'https://localhost:5173/dashboard'
-       }
-     });
+     event.preventDefault(); 
+ try {
+  
+  const { data, error } = await supabase.auth.signUp({
+    email:email,
+    password:password,
+  })
+  setReg(!Reg)
+  if(error){
+    alert('Signup Failed', error.message)
+    console.log(error)
+    setMessage('signup Failed'  )
+  }else{
+    console.log(data)
+    alert('Check your email to continue')
+    setMessage('check your email')
+    return;
+  }
+
+  const user = data.user
+  
+  if(user){
+    const {error: profileError} = await supabase.from('users_information').insert([
+      {
+        id:data.user.id,
+        password:password,
+        email:email,
+        fullname:fullname
+      }
+    ])
+  } 
+ } catch (error) {
+  console.log(error.message,'error working this')
+ }
  
-     if(error){
-       alert('Signup Failed', error.message)
-       console.log(error)
-       setMessage('signup Failed'  )
-     }else{
-       console.log(data)
-       alert('Check your email to continue')
-       setMessage('check your email')
-       return;
-     }
-     
-     if(data){
-       const {error: profileError} = await supabase.from('users_information').insert([
-         {
-           id:data.user.id,
-           password:password,
-           email:email,
-           fullname:fullname
-         }
-       ])
-     } 
-     if(error){
-       alert('Profile creation failed')
-     }else{
-       navigate('/dasboard')
-     }
-   }
+}
+  //    if(error){
+  //      alert('Profile creation failed')
+  //    }else{
+  //      navigate('/dasboard')
+  //    }
+  //  }
+
+  
    
   return (
     <>
@@ -66,14 +71,14 @@ const Signup = () => {
       <p style={{padding:'0.6rem 0'}}>{message}</p>
       <form onSubmit={HandleSignUp}>
       <div className="google">
-             <FaGoogle style={{color:'orange',fontSize:'2rem'}}/>
+             <img style={{width:'2rem'}} src="/Images/google-logo1.png" alt="" />
              <p>Continue with google</p>
             </div>
-            <p>Or</p>
+            <p style={{textAlign:'center', padding:'0.5rem 0'}}>Or</p>
         <label htmlFor="fname">Fullname:</label>
         <input type="text" required placeholder='Jon Doe' autoFocus/>
-        <label htmlFor="surname">Surname:</label>
-        <input type="email" required placeholder='example@example.co'/>
+        <label htmlFor="surname">Email:</label>
+        <input type="email" required placeholder='example@example.co'/> 
         <div className="password-eye">
         <label htmlFor="password">Password:</label>
         <input
@@ -94,21 +99,14 @@ const Signup = () => {
           cursor: "pointer",}} >
           {/* { showPassword ? <FaEye /> : <FaEyeSlash />} */}
           </div>  
-            <button type='submit' className='btnn'>Register</button>
+            <button type='submit' className='btnn'>{Reg ? 'Register': 'loading...'}</button>
             
             <p style={{padding:'0'}}>Already have an account?<Link to="/login">Login</Link></p>
 
           {/* <span>continue with</span> */}  
           <div className="social-login">
            
-           {/* <div className="apple">
-            <FaApple style={{color:'white',backgroundColor:'black',fontSize:'2rem'}}/> 
-            <p>Continue with Apple</p>
-           </div>
-           <div className="facebook">
-            <FaFacebook style={{color:'blue',fontSize:'2rem'}}/> 
-            <p>Continue with facebook</p>
-           </div> */}
+          
           </div>
        </div>
      </form>

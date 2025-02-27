@@ -39,10 +39,7 @@ function Footer() {
     <>
       <footer>
        <div className="right">
-        <p>Osdin.net &copy; 2025 All Right Reserved.</p>
-       </div>
-       <div className="left">
-        <p>Privacy Policy | Terms & Conditions</p>
+        <p>Osdin.net &copy; 2025, All Right Reserved.</p>
        </div>
       </footer>
     </>

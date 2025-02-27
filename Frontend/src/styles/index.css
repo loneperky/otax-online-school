@@ -10,11 +10,10 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   padding: 1rem 5rem;
-  transition: all 1s;
-  width: 100%;
+  transition: ease-in-out all 2s;
   background-color: #b9ece521;
+  
 }
 nav .logo{
   color: rgb(0, 0, 220);
@@ -55,6 +54,7 @@ nav button{
   border: 1px solid black;
 }
 
+
 .bar:nth-child(1){
   transform-origin: top left;
 }
@@ -67,7 +67,7 @@ nav button{
 }
 
 .dropdown{
-  background-color: rgba(255, 255, 255, 0.3);
+  position: -webkit-sticky;
 }
 .dropdown ul{
   display: flex;

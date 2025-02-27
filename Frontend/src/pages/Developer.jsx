@@ -25,7 +25,7 @@ const Developer = () => {
           <div className="view1">
             <div className="top">
               <h1>
-                Artificial Intelligence / Machine Learning Software development
+                Artificial Intelligence & Machine Learning Software development
                 Incubator
               </h1>
               <p>
@@ -35,13 +35,12 @@ const Developer = () => {
               </p>
               <p className="pic">Pick a course to learn below:</p>
             </div>
-            <div className="top-courses">
-              <div className="couser1">
-                <div
-                  className="log
-              "
-                >
-                  <FaDev />
+            `
+            <div className="all-courses">
+              
+            <div className="couser1">
+                <div className="log">
+                <FaDev />
                 </div>
                 <h4>
                   Front/Backend Web Development Full stack with JavaScript
@@ -64,8 +63,7 @@ const Developer = () => {
                 </div>
                 <h4>Android/ iOS App Development Flutter</h4>
               </div>
-            </div>
-            <div className="top-courses">
+
               <div className="couser1">
                 <div className="log">
                   <FaDev />
@@ -90,9 +88,60 @@ const Developer = () => {
                   Data Engineering Data Analysis for AI and Machine Learning
                 </h4>
               </div>
-            </div>
-          </div>
+              
+            <div className="couser1">
+                <div className="log">
+                <FaDev />
+                </div>
+                <h4>
+                  Front/Backend Web Development Full stack with JavaScript
+                </h4>
+              </div>
 
+              <div className="couser1">
+                <div className="log">
+                  <FaDev />
+                </div>
+                <h4>
+                  Artificial Intelligence and Machine Learning Python
+                  Programming{" "}
+                </h4>
+              </div>
+
+              <div className="couser1">
+                <div className="log">
+                  <FaDev />
+                </div>
+                <h4>Android/ iOS App Development Flutter</h4>
+              </div>
+
+              <div className="couser1">
+                <div className="log">
+                  <FaDev />
+                </div>
+                <h4>
+                  UI/UX Design Figma User Interface and User Experience Design
+                </h4>
+              </div>
+
+              <div className="couser1">
+                <div className="log">
+                  <FaDev />
+                </div>
+                <h4>DevSecops Engineering Cybersecurity and DevOps</h4>
+              </div>
+
+              <div className="couser1">
+                <div className="log">
+                  <FaDev />
+                </div>
+                <h4>
+                  Data Engineering Data Analysis for AI and Machine Learning
+                </h4>
+              </div>
+            </div>`
+            
+          </div>
         </div>
       </div>
       <Footer />

@@ -5,6 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root{
+  --background-colour: #fff;
+  --text-color-black: black;
+  --primary-color: blue;
+}
+
 /* Width of the scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* Adjust width */
@@ -36,12 +43,14 @@
 }
 a{
   text-decoration: none;
+  color: var(--background-colour);
 }
 h1{
-  font-size: 2.5em;
+  font-size: 2em;
 }
 p{
-  font-size: 1.2em;
+  font-size: 1em;
+  color: var(--text-color-black);
 }
 .hero2{
   display: flex;
@@ -78,16 +87,16 @@ p{
 
 
 .hero1 h2{
-  color: rgb(0, 0, 87);
+  color: var(--primary-color);
   padding: 1rem 0;
   font-weight: bolder;
 }
 
 .hero1 a{
-  color: rgb(34, 34, 170);
+  color: var(--primary-color);
 }
 .hero1 a:hover{
-  color: blue;
+  color: var(--primary-color);
   text-decoration: none;
 }
 .btns{
@@ -96,18 +105,34 @@ p{
   padding: 2rem 0;
 }
 .btn1{
-  background-color: blue;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--background-colour);
   border: none;
   border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
 }
+
+.btn1:hover{
+  opacity: 0.75;
+}
+
 .btn2{
-  background-color: rgb(255, 255, 255);
-  color: blue;
+  background-color: var(--background-colour);
+  color: var(--primary-color);
   border: 1px solid blue;
   border-radius: 0.4rem;
   cursor: pointer;
+  padding: 0.5rem 1rem;
 }
+
+
+
+.btn2:hover{
+  background-color: var(--primary-color);
+  color: var(--background-colour);
+}
+
+
 
 .section2{
   background-color: #99999933;
@@ -151,11 +176,11 @@ p{
 }
 .sub-section2 h2{
   padding: 1rem 0;
-  font-weight: 900;
+  font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
 }
 .sub-section2 .btnt{
-  color: blue;
+  color: var(--background-colour);
   background-color: rgba(151, 196, 216, 0.221);
   border: none;
   border-radius: 0.3rem;
@@ -164,35 +189,54 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: blue;
   text-align: center;
   padding: 8rem;
   color: white;
   border-radius: 2rem;
+  background-repeat: repeat repeat-y repeat-x;
   background-image: url('/Images/blue.svg');
-  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
 }
+
+.mini p{
+  color: white;
+}
+
 .bt{
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+
   justify-content: center;
   padding: 2rem 0;
 }
-.btn4{
-  border: 1px solid white;
+
+.btnA{
+  background-color: #fff;
+  color: blue;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+.btnB{
   background-color: blue;
   color: white;
-  border-radius: 0.3rem;
+  border: 1px solid white;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
 
+
+
 footer{
-  display: flex;
-  justify-content: space-between;
   background-color: rgb(0, 0, 71);
   padding: 1rem 5rem;
+}
+
+footer p{
   color: white;
+  text-align: center;
 }
 
 @media screen and (max-width:900px) {
@@ -234,11 +278,24 @@ footer{
   .mini{
     padding: 2rem 1rem;
   }
+  .btns{
+    flex-direction: column;
+  }
+
+  .btn1,.btn2{
+    width:100%;
+  }
+
   .bt{
     flex-direction: column;
   }
-  .bt button{
+  .btnA{
     width: 100%;
+    border-radius: 2rem;
+  }
+  .btnB{
+    width: 100%;
+    border-radius: 2rem;
   }
   footer{
     flex-direction: column;

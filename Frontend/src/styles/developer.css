@@ -9,7 +9,8 @@
 .overall-view{
   background-color: white;
   background-image: url('/Images/ellipse.png');
-  padding: 2rem 5rem;
+  padding: 2rem 8rem;
+  padding-bottom: 0;
 }
 
 
@@ -25,9 +26,10 @@
   padding: 0.5rem 0;
 }
 
-.top-courses{
+.all-courses{
   display: flex;
-  padding: 0.5rem 0;
+  width: 100%;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .couser1{
