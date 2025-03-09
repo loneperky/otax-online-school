@@ -6,7 +6,7 @@
 
 .overallpage{
   padding: 2rem 5rem;
-  background-image: url(/Images/ellipse.png);
+  background-image: url('/Images/ellipse.png');
 }
 
 .about-overview{

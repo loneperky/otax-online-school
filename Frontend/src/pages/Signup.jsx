@@ -19,13 +19,14 @@ const Signup = () => {
   
   async function HandleSignUp(event) {
      event.preventDefault(); 
- try {
+
+    try {
   
   const { data, error } = await supabase.auth.signUp({
     email:email,
-    password:password,
+    password:password
   })
-  setReg(!Reg)
+ 
   if(error){
     alert('Signup Failed', error.message)
     console.log(error)
@@ -52,14 +53,9 @@ const Signup = () => {
  } catch (error) {
   console.log(error.message,'error working this')
  }
- 
+
 }
-  //    if(error){
-  //      alert('Profile creation failed')
-  //    }else{
-  //      navigate('/dasboard')
-  //    }
-  //  }
+
 
   
    

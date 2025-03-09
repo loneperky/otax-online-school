@@ -17,7 +17,6 @@ import { Navigate } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
-
 function App() {
   const [authUser, setAuthUser] = useState(null);
   const [loading, setLoading] = useState(true);
