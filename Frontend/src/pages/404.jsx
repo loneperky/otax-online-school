@@ -1,6 +1,11 @@
 import React from 'react'
-
+import { useEffect } from 'react'
 const ErrorPage = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[]);
+
   return (
     <>
       <div className="error">

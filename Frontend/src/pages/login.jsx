@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "../styles/login.css";
 import { Footer } from "./construct";
 import { FaEye } from "react-icons/fa";
@@ -29,6 +29,10 @@ const Login = () => {
       navigate('/dashboard')
     }
   }
+
+   useEffect(()=>{
+      window.scrollTo(0,0)
+    },[]);
 
   return (
     <>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import {
   FaWhatsapp,
   FaLink,
@@ -12,7 +13,13 @@ import {
 import { Contact, Footer } from "./construct";
 import "../styles/contact.css";
 function ContactPage() {
+
+   useEffect(()=>{
+      window.scrollTo(0,0)
+    },[]);
+
   return (
+    
     <>
       <div className="overall">
         <div className="head">

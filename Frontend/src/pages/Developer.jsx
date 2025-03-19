@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import "../styles/developer.css";
 import { FaDev } from "react-icons/fa";
@@ -16,6 +16,9 @@ const Developer = () => {
   const [fullname, setFullname] = useState("");
   const [message,setMessage] = useState('')
 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[]);
  
  
   return (

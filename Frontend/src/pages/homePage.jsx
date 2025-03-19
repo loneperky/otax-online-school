@@ -6,7 +6,11 @@ import AOS from 'aos'
 import gsap from 'gsap'
 import { FaWhatsapp } from "react-icons/fa";
 import '../styles/app.css'
+
 function HomePage() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[]);
 
   return (
     <>

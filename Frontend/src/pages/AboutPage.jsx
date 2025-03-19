@@ -1,8 +1,15 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { Footer } from './construct'
 import '../styles/about.css'
 const AboutPage = () => {
+  
+ useEffect(()=>{
+    window.scrollTo(0,0)
+  },[]);
+
   return (
+    
     <>
       <div className="overallpage">
         <div className="head">
